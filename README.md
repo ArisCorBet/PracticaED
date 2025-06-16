@@ -19,14 +19,6 @@ Se implemnento metodos de busqueda y ardenamiento como Quick Sor, principalmente
 - [Genero](unl-music/src/main/frontend/views/genero-list.tsx)
   
 
-- Crear, editar y eliminar:
-  - Canciones
-  - Álbumes
-  - Géneros
-- Relacionar canciones con géneros y álbumes
-- Uso de estructura de datos: LinkedList, HashMap, QuickSort, etc.
-- Servicios desarrollados bajo principios DAO y Adapter
-
 ## Registros realizados
 
 ![image](https://github.com/user-attachments/assets/9396e845-82b2-47db-a7a9-397614bb4947)
