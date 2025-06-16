@@ -2,7 +2,6 @@
 
 Ariana Cordova - Estructura de Datos
 
-- Se implemnento metodos de busqueda y ardenamiento como Quick Sor, principalmente el la clase Cancion
 
 ## DAOS
 
