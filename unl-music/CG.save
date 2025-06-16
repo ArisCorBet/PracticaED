@@ -1,0 +1,27 @@
+Merge branch 'main' of https://github.com/ArisCorBet/PracticaED
+# Por favor ingresa un mensaje de commit que explique por qué es necesaria esta fusión,
+# especialmente si esto fusiona un upstream actualizado en una rama de tópico.
+#
+# Líneas comenzando con '#' serán ignoradas, y un mensaje vacío aborta
+# el commit.
+#
+# Parece que estás realizando una fusión.
+# Si esto no es correcto, ejecuta
+#	git update-ref -d MERGE_HEAD
+# e intenta de nuevo.
+
+
+# Por favor ingresa el mensaje del commit para tus cambios. Las
+#  líneas que comiencen con '#' serán ignoradas, y un mensaje
+#  vacío aborta el commit.
+#
+# En la rama main
+# Tu rama y 'origin/main' han divergido,
+# y tienen 1 y 1 commits diferentes cada una respectivamente.
+#
+# Todos los conflictos resueltos pero sigues fusionando.
+#
+# Cambios a ser confirmados:
+#	modificados:     README.md
+#
+
