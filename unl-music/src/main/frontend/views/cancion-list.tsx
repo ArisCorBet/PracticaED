@@ -6,7 +6,6 @@ import { useSignal } from '@vaadin/hilla-react-signals';
 import handleError from 'Frontend/views/_ErrorHandler';
 import { Group, ViewToolbar } from 'Frontend/components/ViewToolbar';
 
-import { useDataProvider } from '@vaadin/hilla-react-crud';
 import Cancion from 'Frontend/generated/com/unl/music/base/models/Cancion';
 import { useCallback, useEffect, useState } from 'react';
 
@@ -30,7 +29,7 @@ type CancionEntryFormProps = {
 
 type editarCancionEntryFormUpdateProps = {
   arguments: any;
-  onCrearCancionUpdate?: () => void;
+  onCancionUpdate?: () => void;
 };
 
 
@@ -180,6 +179,8 @@ function CancionEntryForm(props: CancionEntryFormProps) {
 //EDITAR CANCION
 function EditarCancionEntryFormUpdate(props: editarCancionEntryFormUpdateProps) {
   //console.log(props);
+
+  const dialogOpened = useSignal(false);
   useEffect(() => {
     console.log("Editando canción con datos:", props.arguments);
 
@@ -233,8 +234,8 @@ function EditarCancionEntryFormUpdate(props: editarCancionEntryFormUpdateProps) 
           tipo.value,
           idAlb
         );
-        if (props.onCrearCancionUpdate) {
-          props.onCrearCancionUpdate();
+        if (props.onCancionUpdate) {
+          props.onCancionUpdate();
         }
 
         // Limpiar valores
@@ -284,7 +285,7 @@ function EditarCancionEntryFormUpdate(props: editarCancionEntryFormUpdateProps) 
       );
     }, []);
     
-    const dialogOpened = useSignal(false);
+  
 
 
 
@@ -402,6 +403,25 @@ export default function CancionView() {
     });
   }
 
+
+  const callData = () => {
+    CancionServices.listAll().then(function (data) {
+     
+      setItems(data);
+    });
+  }
+
+  function indexLink({ model }: { model: GridItemModel<Cancion> }) {
+    return (
+      <span>
+        <EditarCancionEntryFormUpdate  arguments={model.item} onCancionUpdate={callData} />
+      </span>
+    );
+  }
+
+
+
+
   const criterio = useSignal('');
   const texto = useSignal('');
   const itemSelect = [
@@ -456,30 +476,17 @@ export default function CancionView() {
 
 
 
-
-
-
+  
   function EditarBoton({ item }: { item: Cancion }) {
     return (
-      <EditarCancionEntryFormUpdate 
-  arguments={{ 
-    idCancion: item,
-    nombre: item.nombre,
-    duracion: item.duracion,
-    url: item.url,
-    tipo: item.tipo,
-    id_genero: item.id_genero,
-    id_album: item.id_album
-  }} 
+      <span>
+      <EditarCancionEntryFormUpdate arguments={item} onCancionUpdate={callData} 
 />
+</span>
     );
   }
 
 
-
-
-
-  
 
 
 
@@ -489,7 +496,7 @@ export default function CancionView() {
 
       <ViewToolbar title="Lista de Canciones">
         <Group>
-          <CancionEntryForm />
+          <CancionEntryForm onCancionCreated={callData}/>
         </Group>
       </ViewToolbar>
       <HorizontalLayout theme="spacing">
@@ -510,6 +517,11 @@ export default function CancionView() {
         <Button onClick={search} theme="primary">
           Buscar
         </Button>
+        <Button onClick={callData} theme="secondary">
+          Refrescar
+        </Button>
+
+
       </HorizontalLayout>
       <Grid items={items}>
         <GridColumn  renderer={indexIndex} header="Nro" />
@@ -521,8 +533,8 @@ export default function CancionView() {
         <GridSortColumn path="duracion" header="Duracion"  onDirectionChanged={(e) => order(e, "duracion")}/>
         <GridColumn path="url" header="Link"/> 
         
-      
         <GridColumn header="Acciones" renderer={ EditarBoton}/>
+    
       </Grid>
     </main>
   );

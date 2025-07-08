@@ -220,9 +220,8 @@ public class LinkedList<E> {
     public static void main(String[] args) {
         // StackImplementation<Integer> si = new StackImplementation<>(5);
         Stack<Integer> stack = new Stack<>(5);
-
     }
-
+    
     public boolean contains(Integer val) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'contains'");

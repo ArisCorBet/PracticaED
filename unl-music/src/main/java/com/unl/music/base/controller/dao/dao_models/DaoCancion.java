@@ -113,15 +113,7 @@ public class DaoCancion extends AdapterDao<Cancion> {
         }
     }
 
-    /*
-     * public HashMap<String, Object> BinarySearchRecursive(HashMap<String, Object>
-     * arr[], int a, int b, String attribute){
-     * if(b < 1){
-     * return null;
-     * }
-     * int n = a + (b=1)/2;
-     * if(arr[].ge)
-     * }*/
+
      
 
     private int partition(HashMap<String, Object> arr[], int begin, int end, Integer type, String attribute) {

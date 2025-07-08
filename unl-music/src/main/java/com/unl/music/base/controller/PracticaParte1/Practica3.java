@@ -1,6 +1,9 @@
 package com.unl.music.base.controller.PracticaParte1;
 
 
+import com.unl.music.base.controller.data_struct.graphs.DirectedGraph;
+import com.unl.music.base.controller.data_struct.graphs.DirectedLableGraph;
+import com.unl.music.base.controller.data_struct.graphs.Graph;
 import com.unl.music.base.controller.data_struct.list.LinkedList;
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -86,7 +89,7 @@ public class Practica3 {
 
 
     public static void main(String[] args) {
-        Practica3 app = new Practica3();
+        /*Practica3 app = new Practica3();
         LinkedList<Integer> listaQuick = app.cargarDatos("data.txt");
         LinkedList<Integer> listaShell = app.cargarDatos("data.txt");
 
@@ -104,9 +107,25 @@ public class Practica3 {
         long finShell = System.nanoTime();
         //System.out.println("\nLista ordenada con Shell Sort:");
         //app.printList(listaShell);
-        System.out.println("Tiempo del metodo Shell Sort: " + (finShell - inicioShell) + " ns");
+        System.out.println("Tiempo del metodo Shell Sort: " + (finShell - inicioShell) + " ns");/* */
+        
+        /*Graph grafo = new DirectedGraph(5);
+        grafo.insert(1, 5, 0.65f);
+        grafo.insert(2, 4, 0.85f);
+        System.out.println(grafo.toString()); */
+
+        DirectedLableGraph gd = new DirectedLableGraph<>(5, String.class);
+        gd.label_vertex(1, "Nole");
+        gd.label_vertex(2, "Anahi");
+        gd.label_vertex(3, "Douglas");
+        gd.label_vertex(4, "Ariana");
+        gd.label_vertex(5, "Maria");
+        gd.insert_label("Maria", "Douglas", 10.56f);
+        gd.insert_label("Maria", "Ariana", 1.67f);
+        gd.insert_label("Nole", "Anahi", 5.67f);
+        System.out.println(gd.toString());
+    
+    
     }
-
-
     
 }

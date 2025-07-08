@@ -65,6 +65,9 @@ public class GeneroServices {
             throw new  Exception("No se pudo modificar los datos del artista");
     }
 
+
+
+    
     public List<Genero> list(Pageable pageable) {        
         return Arrays.asList(da.listAll().toArray());
     }
