@@ -21,7 +21,7 @@ LABERINTO
 
   
 
-## Registros realizados
+## Laberinto Generado y resuelto
 
 ![image](https://github.com/user-attachments/assets/a55fdbef-9908-4692-8a6c-63faaa64b696)
 
