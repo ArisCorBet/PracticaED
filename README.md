@@ -23,5 +23,6 @@ LABERINTO
 
 ## Registros realizados
 
-![image](https://github.com/user-attachments/assets/9396e845-82b2-47db-a7a9-397614bb4947)
+![image](https://github.com/user-attachments/assets/a55fdbef-9908-4692-8a6c-63faaa64b696)
+
 
