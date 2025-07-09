@@ -1,22 +1,24 @@
-# Practica 3
+# Practica 4
 
 Ariana Cordova - Estructura de Datos
+LABERINTO
 
 
-## DAOS
+## Graphs
 
-- [DaoCancion](unl-music/src/main/java/com/unl/music/base/controller/dao/dao_models/DaoCancion.java)
-- [DaoGenero](unl-music/src/main/java/com/unl/music/base/controller/dao/dao_models/DaoGenero.java)
-- [DaoAlbum](unl-music/src/main/java/com/unl/music/base/controller/dao/dao_models/DaoAlbum.java)
+- [Adjacency](unl-music/src/main/java/com/unl/music/base/controller/data_struct/graphs/Adjacency.java)
+- [Graph](unl-music/src/main/java/com/unl/music/base/controller/data_struct/graphs/Graph.java)
+- [DirectedGraph](unl-music/src/main/java/com/unl/music/base/controller/data_struct/graphs/DirectedGraph.java)
+- [DirectedLabelGraph](unl-music/src/main/java/com/unl/music/base/controller/data_struct/graphs/DirectedLableGraph.java)
+- [UnidirectedGraph](unl-music/src/main/java/com/unl/music/base/controller/data_struct/graphs/UnidirectedGraph.java)
 
-## Service
-- [CancionService](unl-music/src/main/java/com/unl/music/base/controller/services/CancionServices.java)
-- [GeneroService](unl-music/src/main/java/com/unl/music/base/controller/services/GeneroServices.java)
-- [AlbumService](unl-music/src/main/java/com/unl/music/base/controller/services/AlbumServices.java)
+## Laberinto
+- [Prim2](unl-music/src/main/java/com/unl/music/base/controller/data_struct/Laberinto/Prim2.java)
+- [MazeGraph](unl-music/src/main/java/com/unl/music/base/controller/data_struct/Laberinto/MazeGraph.java)
+- [Dijkstra](unl-music/src/main/java/com/unl/music/base/controller/data_struct/Laberinto/MazeSolver.java)
+- [MazePanel](unl-music/src/main/java/com/unl/music/base/controller/data_struct/Laberinto/MazePanel.java)
+- [MazeFrame](unl-music/src/main/java/com/unl/music/base/controller/data_struct/Laberinto/MazeFrame.java)
 
-## View
-- [Cancion](unl-music/src/main/frontend/views/cancion-list.tsx)
-- [Genero](unl-music/src/main/frontend/views/genero-list.tsx)
   
 
 ## Registros realizados
